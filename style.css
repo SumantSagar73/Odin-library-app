@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f4f8; /* Soft background color */
+}
+
+/* Header */
+header {
+  width: 100%;
+  background: #2c3e50; /* Dark slate blue */
+  color: #ecf0f1; /* Light gray */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#new-book-btn {
+  background-color: #1abc9c; /* Soft teal */
+  color: white;
+}
+
+#new-book-btn:hover {
+  background-color: #16a085; /* Darker teal */
+}
+
+#book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+/* Book Card */
+.book-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.book-card h3 {
+  color: #2c3e50; /* Darker text for title */
+}
+
+.book-card p {
+  color: #7f8c8d; /* Lighter text for details */
+}
+
+/* Buttons inside Book Card */
+.book-card button {
+  background-color: #3498db; /* Soft blue */
+  color: white;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.book-card button:last-child {
+  background-color: #e74c3c; /* Red for remove */
+}
+
+.book-card button:last-child:hover {
+  background-color: #c0392b; /* Darker red for remove */
+}
+
+/* Dialog (Form Popup) */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ecf0f1; /* Light background for form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7; /* Light border for inputs */
+}
+
+input:focus, button:focus {
+  outline: none;
+  border-color: #3498db; /* Highlight color on focus */
+}
+/* Styling the checkbox */
+input[type="checkbox"] {
+  width: 20px;  /* Increase width */
+  height: 20px; /* Increase height */
+  margin: 0;    /* Remove any default margin */
+  cursor: pointer; /* Change cursor to pointer when hovering over checkbox */
+}
+
+/* Optional: Change the focus effect to match the theme */
+input[type="checkbox"]:focus {
+  outline: none;
+}
