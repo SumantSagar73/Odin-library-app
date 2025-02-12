@@ -1,17 +1,23 @@
 //store book objects
 const myLibrary = [];
 
+//Define Book class
+class Book {
+  constructor(title, author, pages, read){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 
-//Book constructor function
-function Book(title, author, pages, read){
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+  // Method to toggle read status 
+  toggleReadStatus(){
+    this.read = !this.read;
+  }
 }
 
 
-//add a book to the array
+//add a book to the library
 
 function addBookToLibrary(title, author, pages, read){
   const newBook = new Book(title, author, pages, read);
@@ -48,6 +54,11 @@ function removeBook(index){
   displayBooks();
 }
 
+function toggleRead(index) {
+  myLibrary[index].toggleReadStatus();
+  displayBooks(); // Refresh the display
+}
+
 // Handle form submission
 document.getElementById("book-form").addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent form from reloading the page
@@ -81,13 +92,3 @@ document.getElementById("close-dialog").addEventListener("click", function () {
   document.getElementById("book-dialog").close();
 });
 
-
-// Prototype function to toggle read status
-Book.prototype.toggleReadStatus = function () {
-  this.read = !this.read;
-};
-
-function toggleRead(index) {
-  myLibrary[index].toggleReadStatus();
-  displayBooks(); // Refresh the display
-}
